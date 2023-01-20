@@ -77,6 +77,7 @@ def do_search() -> 'html':
     letters = request.form['letters']
     title = "Here are your results:"
     results = str(search4letters(phrase, letters))
+    print(results) # Added for GIT demo
     log_request(request, results)
     return render_template('results.html',
                            the_phrase=phrase,
